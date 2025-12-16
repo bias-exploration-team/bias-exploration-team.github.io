@@ -58,7 +58,6 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
 header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--header-text);
@@ -467,23 +466,6 @@ button.btn-secondary:hover {
     border-color: var(--primary);
 }
 
-/* OUTPUT BOX */
-.output-box {
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 16px;
-    min-height: 100px;
-    background: var(--bg-card);
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    font-size: 13px;
-    line-height: 1.5;
-    font-family: 'Courier New', monospace;
-    color: var(--text-dark);
-    overflow-y: auto;
-    max-height: 300px;
-}
-
 .output-box.success {
     border-left: 3px solid var(--success);
     background: rgba(39, 174, 96, 0.03);
@@ -495,24 +477,60 @@ button.btn-secondary:hover {
 }
 
 /* FIXED EXAMPLE */
+/* FIXED EXAMPLE */
 .fixed-example {
     margin-top: 12px;
-    padding: 16px;
-    border-radius: 6px;
-    background: linear-gradient(135deg, rgba(31, 71, 136, 0.05), rgba(39, 174, 96, 0.05));
-    border: 1px solid rgba(31, 71, 136, 0.1);
-    font-size: 13px;
+    padding: 32px;
+    border-radius: 12px;
+    /* Gradient: Grey-Blue to Orange with 0.15 opacity */
+    background: linear-gradient(135deg, rgba(96, 123, 143, 0.15), rgba(233, 127, 74, 0.15));
+    border: 1px solid rgba(96, 123, 143, 0.3);
+    font-size: 18px;
     line-height: 1.6;
-    /* Remove this if you had it from previous steps: position: relative; */
+}
+
+.case-study-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .case-study-layout {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+.case-explanation {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-left: 2px solid var(--border);
+    padding-left: 20px;
+}
+
+/* Show explanation on hover of the container */
+.fixed-example:hover .case-explanation {
+    opacity: 1;
 }
 
 /* ADD THIS NEW CSS BLOCK */
+/* SETTINGS: Change 'max-height' to control text box size */
 .fixed-example .output-display {
-    max-height: 150px;
-    /* Adjust this value as needed, but this prevents infinite stretch */
+    max-height: 600px;
+    /* Increased from 150px */
     overflow-y: auto;
-    padding: 8px;
+    padding: 16px;
     border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-card);
+}
+
+/* SETTINGS: Change 'padding' to control image box size */
+.image-output-box {
+    text-align: center;
+    border: 1px dashed var(--border);
+    padding: 40px;
+    /* Increased from 20px */
     border-radius: 4px;
     background: var(--bg-card);
 }
@@ -605,42 +623,6 @@ footer p {
 }
 
 /* --- NEW INTERACTIVE ELEMENTS CSS --- */
-
-
-
-/* Bias Explanation Popup */
-#bias-popup {
-    position: absolute;
-    /* Will be positioned by JavaScript */
-    top: 0;
-    left: 0;
-    width: 300px;
-    min-height: 100px;
-    padding: 15px;
-    background-color: var(--bg-card);
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    box-shadow: var(--shadow-md);
-    z-index: 100;
-    opacity: 0;
-    /* Initially hidden */
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-    /* Prevents popup from blocking clicks */
-}
-
-#bias-popup.visible {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-}
-
-#bias-popup strong {
-    color: var(--accent);
-    display: block;
-    margin-bottom: 5px;
-}
 
 /* THEME SWITCH SLIDER */
 .theme-switch-wrapper {
