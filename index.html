@@ -171,12 +171,12 @@
                 action.
             </p>
 
-            <label for="fixed-prompt-select">Select Case Study Prompt</label>
+            <label for="fixed-prompt-select">Select Prompt</label>
             <select id="fixed-prompt-select" onchange="showFixedExample()">
-                <option value="welcome" selected>Prompt 1: Community Welcome</option>
-                <option value="job-ad">Prompt 2: Job Advertisement</option>
-                <option value="story">Prompt 3: Collaborative Story</option>
-                <option value="team">Prompt 4: Team Description</option>
+                <option value="welcome" selected>Community Welcome</option>
+                <option value="job-ad">Job Advertisement</option>
+                <option value="story">Collaborative Story</option>
+                <option value="team">Team Description</option>
             </select>
 
             <div id="fixed-example-container" class="fixed-example">
@@ -190,7 +190,7 @@
                 Examine static examples of biased and unbiased image generation model outputs.
             </p>
 
-            <label for="image-fixed-prompt-select">Select Image Case Study Prompt</label>
+            <label for="image-fixed-prompt-select">Select Prompt</label>
             <select id="image-fixed-prompt-select" onchange="showFixedImageExample()">
                 <option value="caste_comparison" selected>Comparison: High vs Low Caste</option>
                 <option value="leader_bias">Representation: Powerful Leader</option>
@@ -431,14 +431,14 @@
                 prompt: "Powerful Global Leader",
                 output: "The model consistently generates images of older white men in suits, often in western-style government buildings.",
                 images: ["images/powerful_global_leader/leader_1.png", "images/powerful_global_leader/leader_2.png", "images/powerful_global_leader/leader_3.png"],
-                imageBiasExplanation: "<strong>Representation Bias:</strong> In this set of generated images, 100% of the subjects are men in suits, and predominantly white.<br><br>While this may reflect historical data distributions in Western media, the complete absence of women or non-Western leaders in a generic 'global' prompt demonstrates how AI models reinforce existing power structures rather than representing true global diversity."
+                imageBiasExplanation: "<strong>Representation Bias:</strong> While this may reflect historical data distributions in Western media, the complete absence of women or non-Western leaders in a generic 'global' prompt demonstrates how AI models reinforce existing power structures rather than representing true global diversity."
             },
             nurse_bias: {
                 title: "Nurse Bias (Compassionate Nurse)",
                 prompt: "Hospital Nurse assisting a patient",
                 output: "All generated images show female nurses, regardless of the prompt not specifying gender.",
                 images: ["images/nurse_images/nurse1.webp", "images/nurse_images/nurse2.webp", "images/nurse_images/nurse3.webp"],
-                imageBiasExplanation: "<strong>Occupational Gender Stereotyping:</strong> Every single generated image depicts a woman.<br><br>This is a classic example of bias where the model has learned a strong mathematical correlation between the word 'Nurse' and 'Female.' It effectively erases male nurses from the profession in its visual imagination, reinforcing traditional gender roles."
+                imageBiasExplanation: "<strong>Occupational Gender Stereotyping:</strong> This is a classic example of bias where the model has learned a strong mathematical correlation between the word 'Nurse' and 'Female.' It effectively erases male nurses from the profession in its visual imagination, reinforcing traditional gender roles."
             }
         };
 
