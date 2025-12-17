@@ -61,7 +61,7 @@
             <h2>Introduction</h2>
             <p>While AI researchers recognize that bias is complex and systemic, the general public often views algorithms as "neutral" or "objective." This creates a dangerous gap in awareness.</p>
             
-            <p>Inspired by the findings of our <strong><a href="https://www.technologyreview.com/2025/10/01/1124621/openai-india-caste-bias/" target="_blank" style="color: var(--primary); text-decoration: underline;">Caste Bias Case Study</a></strong>, we created this website as an accessible gateway for users to explore these issues.</p>
+            <p>Inspired by the findings of this <strong><a href="https://www.technologyreview.com/2025/10/01/1124621/openai-india-caste-bias/" target="_blank" style="color: var(--primary); text-decoration: underline;">Caste Bias Study</a></strong> by Nilesh Christopher, we created this website as an accessible gateway for users to explore these issues.</p>
             
             <p>The title <strong>"Who's the Outcast(e)?"</strong> is a deliberate play on words: it refers to those marginalized as "outcasts" and specifically investigates how the <strong>Caste System</strong>—a deep-seated social hierarchy—is mirrored and reinforced by Generative AI.</p>
 
@@ -210,35 +210,23 @@
         <section id="understanding-biases">
             <h2>Understanding Biases</h2>
             <p><strong>So, what are we seeing here?</strong><br>
-                Biases are consistent errors that create unfair outcomes. In the examples above, you might see the model
-                defaulting to stereotypes because those paths are mathematically "safer" or more common in its training
-                data.</p>
+                AI bias refers to the occurrence of biased results due to human prejudices that skew the original training data or the algorithm itself. AI bias is what happens when we feed a model data that is already unfair. It’s not just a small glitch, the AI learns these unfair patterns as if they were facts.
+            </p>
 
-            <p><strong>Types of biases we observe include:</strong></p>
-
-            <div style="text-align: center; margin: 20px 0;">
+            <div style="text-align: center; margin: 30px 0;">
                 <img src="images/informative_images/bias_ai.jpg" alt="Types of AI Bias"
-                    style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
 
-            <ul style="margin-bottom: 16px;">
-                <li><strong>Representation Bias:</strong> Occurs when certain groups are underrepresented or
-                    misrepresented in the training data (e.g., datasets missing images of leaders from the Global
-                    South).</li>
-                <li><strong>Historical Bias:</strong> Reflects existing societal inequalities and historical prejudices
-                    captured in the data (e.g., associating roles like "nurse" primarily with women).</li>
-                <li><strong>Stereotypical Bias:</strong> The system learns and propagates harmful associations or
-                    specific traits to groups based on stereotypes (e.g., linking specific ethnic groups to criminal
-                    behavior).</li>
-                <li><strong>Confirmation Bias:</strong> The tendency of a system (or user) to favor information that
-                    confirms pre-existing beliefs or hypotheses.</li>
-                <li><strong>Selection Bias:</strong> Introduced when the data selected for training is not truly
-                    representative of the population intended to be modeled.</li>
-                <li><strong>Automation Bias:</strong> The propensity for humans to favor suggestions from automated
-                    decision-making systems and to ignore contradictory information made without automation.</li>
-            </ul>
+            <p><strong>Here are some common biases:</strong></p>
 
-            <p>As you can see, even "cutting-edge" models can inadvertently perpetuate these prejudices.</p>
+            <ul style="margin-bottom: 24px; line-height: 1.6;">
+                <li><strong>Representation Bias:</strong> When datasets lack diversity, certain groups become "invisible". This is why generic prompts often default to Western or majority viewpoints.</li>
+                <li><strong>Historical Bias:</strong> AI mirrors past societal inequalities. If historical data shows a gender gap in leadership, the AI will likely replicate that exclusion today.</li>
+                <li><strong>Stereotypical Bias:</strong> The model reinforces harmful associations. For example, assuming a doctor is a man or that "low-caste" backgrounds are linked to manual labor.</li>
+                <li><strong>Feedback Loops:</strong> When biased AI outputs are used as data for future models, they create a cycle that continuously reinforces the same unfair patterns over time.</li>
+                <li><strong>Explainability & Automation Bias:</strong> AI is often a "black box". Humans tend to trust its suggestions blindly because they appear objective, even when they lack clear reasoning or proof.</li>
+            </ul>
         </section>
 
         <div class="divider"></div>
@@ -249,7 +237,7 @@
             <p style="margin-bottom: 24px;">Now it's your turn to experiment. We have structured this playground to be a lighter, interactive medium for you to see these concepts in action.</p>
 
             <h3 style="font-size: 1.1em; margin-bottom: 10px;">About the Sandbox Models:</h3>
-            <p style="font-size: 14px; margin-bottom: 10px;">To allow you to test these concepts directly on this page, we are using two specialized models that run locally in your browser:</p>
+            <p style="font-size: 14px; margin-bottom: 10px;">To allow you to test these concepts directly on this page, we are using two specialized models that run locally:</p>
             <ul style="font-size: 14px; margin-bottom: 24px;">
                 <li><strong>SmolLM2:</strong> A compact, high-efficiency Language Model used to generate text responses. Find out more about this model <strong><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct" target="_blank" style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
                 <li><strong>SDXL-Turbo:</strong> A fast-iteration image model that visualizes how prompts are transformed into pixels in real-time. Find out more about this model <strong><a href="https://huggingface.co/stabilityai/sdxl-turbo" target="_blank" style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
