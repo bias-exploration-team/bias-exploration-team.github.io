@@ -654,6 +654,47 @@ footer p {
     .page {
         padding: 20px 16px 40px 16px;
     }
+
+    /* Fix Index/Nav Bar on Mobile - Horizontal, Relative Sizing, Wrap */
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* Allow switch to drop to next line */
+        justify-content: center;
+        /* Center items */
+        align-items: center;
+        padding: 1vh 0;
+        height: auto;
+        width: 100%;
+        overflow: visible;
+        /* Allow content to flow */
+    }
+
+    .navbar a {
+        font-size: 2.5vw;
+        /* Relative text size */
+        padding: 0.5vh 2vw;
+        /* Relative padding */
+        white-space: nowrap;
+        border: none;
+        flex-shrink: 0;
+    }
+
+    /* Switch moves under if needed */
+    .theme-switch-wrapper {
+        position: relative;
+        transform: scale(0.65);
+        margin-top: 1vh;
+        /* Move under if wrapped */
+        margin-left: 2vw;
+        /* Space if inline */
+        right: auto;
+        top: auto;
+        flex-shrink: 0;
+        transform-origin: center;
+        /* Center scaling */
+    }
 }
 
 /* LOADING STATE */

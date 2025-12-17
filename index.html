@@ -57,13 +57,23 @@
         <!-- INTRODUCTION -->
         <section id="introduction" style="margin-bottom: 0; padding-bottom: 0;">
             <h2>Introduction</h2>
-            <p>While AI researchers recognize that bias is complex and systemic, the general public often views algorithms as "neutral" or "objective." This creates a dangerous gap in awareness.</p>
-            
-            <p>Inspired by the findings of this <strong><a href="https://www.technologyreview.com/2025/10/01/1124621/openai-india-caste-bias/" target="_blank" style="color: var(--primary); text-decoration: underline;">Caste Bias Study</a></strong> by Nilesh Christopher, we created this website as an accessible gateway for users to explore these issues.</p>
-            
-            <p>The title <strong>"Who's the Outcast(e)?"</strong> is a deliberate play on words: it refers to those marginalized as "outcasts" and specifically investigates how the <strong>Caste System</strong>—a deep-seated social hierarchy—is mirrored and reinforced by Generative AI.</p>
+            <p>While AI researchers recognize that bias is complex and systemic, the general public often views
+                algorithms as "neutral" or "objective." This creates a dangerous gap in awareness.</p>
 
-            <p>Our goal is to move you from the ideal that "AI is magic" toward a critical mindset, showing that these models require extra care and verification. For a deep dive, read our full <strong><a href="URL_DO_VOSSO_BLOG" target="_blank" style="color: var(--primary); text-decoration: underline;">Blog Post</a></strong>.</p>
+            <p>Inspired by the findings of this <strong><a
+                        href="https://www.technologyreview.com/2025/10/01/1124621/openai-india-caste-bias/"
+                        target="_blank" style="color: var(--primary); text-decoration: underline;">Caste Bias
+                        Study</a></strong> by Nilesh Christopher, we created this website as an accessible gateway for
+                users to explore these issues.</p>
+
+            <p>The title <strong>"Who's the Outcast(e)?"</strong> is a deliberate play on words: it refers to those
+                marginalized as "outcasts" and specifically investigates how the <strong>Caste System</strong>, a
+                deep-seated social hierarchy, is mirrored and reinforced by Generative AI.</p>
+
+            <p>Our goal is to move you from the ideal that "AI is magic" toward a critical mindset, showing that these
+                models require extra care and verification. For a deep dive, read our full <strong><a
+                        href="URL_DO_VOSSO_BLOG" target="_blank"
+                        style="color: var(--primary); text-decoration: underline;">Blog Post</a></strong>.</p>
         </section>
 
         <!-- HOW MODELS WORK -->
@@ -74,7 +84,7 @@
 
             <h3 style="margin-top: 16px;">Large Language Models (e.g., ChatGPT)</h3>
             <p>At their core, Large Language Models function like sophisticated prediction engines. They don't "know"
-                facts in the way humans do; instead, they operate on probability. Having analyzed billions of sentences,
+                facts in the way humans do, instead, they operate on probability. Having analyzed billions of sentences,
                 they predict the next piece of text (token) in a sequence.</p>
             <p>For example, if you type <em>"The cat sat on the"</em>, the model calculates that <em>"mat"</em> is
                 statistically the most likely next word. It repeats this process thousands of times per second to build
@@ -133,7 +143,7 @@
                 answer?</p>
 
             <p>The problem lies in the <strong>training data</strong>. For a model to learn patterns, it must be fed
-                immense amounts of data—books, articles, websites, and images. This data allows it to learn the
+                immense amounts of data:books, articles, websites, and images. This data allows it to learn the
                 correlations between words and concepts.</p>
 
             <p>However, this data mirrors our society, including its imperfections. If the training data contains skewed
@@ -142,11 +152,10 @@
 
             <p><strong>"Garbage In, Garbage Out":</strong> If 80% of the internet's stories about CEOs feature men, the
                 model learns a mathematical correlation: <em>"CEO" implies "man"</em>. This isn't malice on the part of
-                the AI; it's a faithful reflection of the biased input data it was fed.</p>
+                the AI, it's a faithful reflection of the biased input data it was fed.</p>
 
             <div style="text-align: center; margin: 20px 0;">
-                <img src="images/informative_images/ai_allucination_pipeline.png" 
-                    alt="Garbage In, Garbage Out Diagram"
+                <img src="images/informative_images/ai_allucination_pipeline.png" alt="Garbage In, Garbage Out Diagram"
                     style="width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <p style="margin-top: 12px; font-size: 14px; color: var(--text-muted);">
                     See more about this <a href="https://shelf.io/blog/garbage-in-garbage-out-ai-implementation/"
@@ -154,34 +163,43 @@
                 </p>
             </div>
             <p>
-                Generative AI models are prone to <strong>"hallucinations"</strong>—confidently presenting incorrect or
+                Generative AI models are prone to <strong>"hallucinations"</strong>: confidently presenting incorrect or
                 fabricated information as fact. This happens because they are predicting the next likely word, not
                 retrieving facts from a database.
             </p>
-            <p>Even though companies try to filter this data (RLHF), biases run deep in language and culture, making
-                them incredibly difficult to completely erase.</p>
+            <p>Even though there are many ways to filter this hallucinated data (such as Reinforcement Learning from
+                Human Feedback (RLHF); Retrieval-Augmented Generation (RAG); etc. You can check <a
+                    href="https://www.voiceflow.com/blog/prevent-llm-hallucinations" target="_blank"
+                    style="color: var(--primary); text-decoration: underline;">this</a> out!),
+                biases run deep in language and culture and these methods are not always effective, which makes erasing
+                it incredibly difficult.</p>
 
-        <!-- UNDERSTANDING BIASES -->
-            <h3>Understanding Biases</h3>
-            <p><strong>So, what are we seeing here?</strong><br>
-                AI bias refers to the occurrence of biased results due to human prejudices that skew the original training data or the algorithm itself. AI bias is what happens when we feed a model data that is already unfair. It’s not just a small glitch, the AI learns these unfair patterns as if they were facts.
-            </p>
+            <!-- UNDERSTANDING BIASES -->
+            <h3>What types of biases are there?</h3>
+            <ul style="margin-bottom: 24px; line-height: 1.6;">
+                <li><strong>Representation Bias:</strong> When datasets lack diversity, certain groups become
+                    "invisible". This is why generic prompts often default to Western or majority viewpoints.</li>
+                <li><strong>Historical Bias:</strong> AI mirrors past societal inequalities. If historical data shows a
+                    gender gap in leadership, the AI will likely replicate that exclusion today.</li>
+                <li><strong>Stereotypical Bias:</strong> The model reinforces harmful associations. For example,
+                    assuming a doctor is a man or that "low-caste" backgrounds are linked to manual labor.</li>
+                <li><strong>Feedback Loops:</strong> When biased AI outputs are used as data for future models, they
+                    create a cycle that continuously reinforces the same unfair patterns over time.</li>
+                <li><strong>Explainability & Automation Bias:</strong> AI is often a "black box". Humans tend to trust
+                    its suggestions blindly because they appear objective, even when they lack clear reasoning or proof.
+                </li>
+            </ul>
 
             <div style="text-align: center; margin: 30px 0;">
                 <img src="images/informative_images/bias_ai.jpg" alt="Types of AI Bias"
                     style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
+            <p>
+                Unfortunately, there are a lot of types of biases, so if you are interested in finding more, check
+                <a href="https://www.ibm.com/think/topics/ai-bias" target="_blank"
+                    style="color: var(--primary); text-decoration: underline;">this</a> out!
+            </p>
 
-            <p><strong>Here are some common biases:</strong></p>
-
-            <ul style="margin-bottom: 24px; line-height: 1.6;">
-                <li><strong>Representation Bias:</strong> When datasets lack diversity, certain groups become "invisible". This is why generic prompts often default to Western or majority viewpoints.</li>
-                <li><strong>Historical Bias:</strong> AI mirrors past societal inequalities. If historical data shows a gender gap in leadership, the AI will likely replicate that exclusion today.</li>
-                <li><strong>Stereotypical Bias:</strong> The model reinforces harmful associations. For example, assuming a doctor is a man or that "low-caste" backgrounds are linked to manual labor.</li>
-                <li><strong>Feedback Loops:</strong> When biased AI outputs are used as data for future models, they create a cycle that continuously reinforces the same unfair patterns over time.</li>
-                <li><strong>Explainability & Automation Bias:</strong> AI is often a "black box". Humans tend to trust its suggestions blindly because they appear objective, even when they lack clear reasoning or proof.</li>
-            </ul>
-        
         </section>
 
         <div class="divider"></div>
@@ -228,13 +246,21 @@
         <!-- TRY IT YOURSELF -->
         <section id="try-it-yourself">
             <h2>Try it Yourself!</h2>
-            <p style="margin-bottom: 24px;">Now it's your turn to experiment. We have structured this playground to be a lighter, interactive medium for you to see these concepts in action.</p>
+            <p style="margin-bottom: 24px;">Now it's your turn to experiment. We have structured this playground to be a
+                lighter, interactive medium for you to see these concepts in action.</p>
 
             <h3 style="font-size: 1.1em; margin-bottom: 10px;">About the Sandbox Models:</h3>
-            <p style="font-size: 14px; margin-bottom: 10px;">To allow you to test these concepts directly on this page, we are using two specialized models that run locally:</p>
+            <p style="font-size: 14px; margin-bottom: 10px;">To allow you to test these concepts directly on this page,
+                we are using two specialized models that run locally:</p>
             <ul style="font-size: 14px; margin-bottom: 24px;">
-                <li><strong>SmolLM2:</strong> A compact, high-efficiency Language Model used to generate text responses. Find out more about this model <strong><a href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct" target="_blank" style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
-                <li><strong>SDXL-Turbo:</strong> A fast-iteration image model that visualizes how prompts are transformed into pixels in real-time. Find out more about this model <strong><a href="https://huggingface.co/stabilityai/sdxl-turbo" target="_blank" style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
+                <li><strong>SmolLM2:</strong> A compact, high-efficiency Language Model used to generate text responses.
+                    Find out more about this model <strong><a
+                            href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct" target="_blank"
+                            style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
+                <li><strong>SDXL-Turbo:</strong> A fast-iteration image model that visualizes how prompts are
+                    transformed into pixels in real-time. Find out more about this model <strong><a
+                            href="https://huggingface.co/stabilityai/sdxl-turbo" target="_blank"
+                            style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
             </ul>
 
             <div style="width: 100%; display: flex; justify-content: center; margin-top: 24px;">
@@ -248,12 +274,18 @@
                     style="background: none; border: none; padding: 0; font-weight: bold; color: var(--warning); display: inline;">
                     Important Note:</span>
                 <span style="display: inline; margin-left: 8px;">
-                    Outputs may vary due to the models' inherent stochasticity. The goal is to develop <strong>critical thinking</strong> when using any AI tool.
+                    Outputs may vary due to the models' inherent stochasticity. The goal is to develop <strong>critical
+                        thinking</strong> when using any AI tool.
                 </span>
             </div>
 
             <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border);">
-                <p>Beyond this sandbox, we encourage you to take the prompts from our examples and test them on any major AI model you use—such as <strong>ChatGPT, Claude, Gemini,</strong> or image generators like <strong>Sora and Nano Banana</strong>. You will likely find that even the most famous models still exhibit these systemic cultural prejudices, proving that bias is a challenge across the entire industry.</p>
+                <p>Beyond this sandbox, we encourage you to take the prompts from our examples and test them on any
+                    major AI model you use, such as <strong>ChatGPT, Claude, Gemini,</strong> or image generators like
+                    <strong>Sora and Nano Banana</strong>. You will likely find that even the most famous models still
+                    exhibit these systemic cultural prejudices, proving that bias is a challenge across the entire
+                    industry.
+                </p>
             </div>
         </section>
 
@@ -262,23 +294,31 @@
         <!-- CONCLUSION -->
         <section id="conclusion">
             <h2>Conclusion</h2>
-            <p>Generative AI offers incredible potential to transform how we learn, research, and work. However, as we have explored, these tools are not perfect; they can confidently produce falsehoods and amplify harmful biases that exist in our society.</p>
+            <p>Generative AI offers incredible potential to transform how we learn, research, and work. However, as we
+                have explored, these tools are not perfect: they can confidently produce falsehoods and amplify harmful
+                biases that exist in our society.</p>
 
-            <p>While AI is a powerful assistant, it cannot replace human judgment. The "human touch" remains crucial to ensure these systems are used responsibly. By staying aware of their limitations, we can harness the best of what AI offers while protecting ourselves and others from its mistakes.</p>
+            <p>While AI is a powerful assistant, it cannot replace human judgment. The "human touch" remains crucial to
+                ensure these systems are used responsibly. By staying aware of their limitations, we can harness the
+                best of what AI offers while protecting ourselves and others from its mistakes.</p>
 
             <div style="text-align: center; margin-top: 40px;">
                 <img src="images/informative_images/comunity_holding_hands.jpg" alt="Community Holding Hands"
                     style="max-width: 100%; border-radius: 8px; box-shadow: var(--shadow-md);">
-                <p style="margin-top: 15px; font-style: italic; color: var(--text-muted);">By working together, we can make the most of AI while making the digital world fairer for everyone.</p>
             </div>
 
             <h3 style="margin-top: 32px;">What can you do?</h3>
-            <p>It’s simple: <strong>Be a partner to the AI, not just a passenger.</strong> Use these three steps to keep your "human touch" active:</p>
-            
+            <p>It’s simple: <strong>Be a partner to the AI, not just a passenger.</strong> Use these three steps to keep
+                your "human touch" active:</p>
+
             <ul style="line-height: 1.6; margin-bottom: 32px;">
-                <li><strong>Question the Patterns:</strong> If an AI result feels like an unfair cliché or a stereotype, it probably is. Always ask yourself: "Does this represent everyone fairly?"</li>
-                <li><strong>Spot the "Hallucinations":</strong> AI can sometimes make up facts that sound very convincing. Always verify important dates, citations, or names using trusted books or official sources.</li>
-                <li><strong>Stay Critical:</strong> Use AI to brainstorm or explore, but always make the final decision yourself. Your unique perspective and ethics are things no algorithm can replicate.</li>
+                <li><strong>Question the Patterns:</strong> If an AI result feels like an unfair stereotype,
+                    it probably is. Always ask yourself: "Does this represent everyone fairly?"</li>
+                <li><strong>Spot the "Hallucinations":</strong> AI can sometimes make up facts that sound very
+                    convincing. Always verify important dates, citations, or names using trusted books or official
+                    sources.</li>
+                <li><strong>Stay Critical:</strong> Use AI to brainstorm or explore, but always make the final decision
+                    yourself. Your unique perspective and ethics are things no algorithm can replicate.</li>
             </ul>
 
         </section>
