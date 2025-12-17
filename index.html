@@ -25,7 +25,6 @@
         <a href="#origin-of-bias">Origin of Bias</a>
         <a href="#text-examples">Text Examples</a>
         <a href="#image-examples">Image Examples</a>
-        <a href="#understanding-biases">Understanding Biases</a>
         <a href="#try-it-yourself">Try It Yourself</a>
         <a href="#conclusion">Conclusion</a>
         <div class="theme-switch-wrapper">
@@ -41,7 +40,6 @@
                         <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
                         <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
                         <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
@@ -147,8 +145,9 @@
                 the AI; it's a faithful reflection of the biased input data it was fed.</p>
 
             <div style="text-align: center; margin: 20px 0;">
-                <img src="images/informative_images/ai_allucination_pipeline.png" alt="Garbage In, Garbage Out Diagram"
-                    style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <img src="images/informative_images/ai_allucination_pipeline.png" 
+                    alt="Garbage In, Garbage Out Diagram"
+                    style="width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 <p style="margin-top: 12px; font-size: 14px; color: var(--text-muted);">
                     See more about this <a href="https://shelf.io/blog/garbage-in-garbage-out-ai-implementation/"
                         target="_blank" style="color: var(--primary); text-decoration: underline;">HERE</a>
@@ -161,9 +160,29 @@
             </p>
             <p>Even though companies try to filter this data (RLHF), biases run deep in language and culture, making
                 them incredibly difficult to completely erase.</p>
+
+        <!-- UNDERSTANDING BIASES -->
+            <h3>Understanding Biases</h3>
+            <p><strong>So, what are we seeing here?</strong><br>
+                AI bias refers to the occurrence of biased results due to human prejudices that skew the original training data or the algorithm itself. AI bias is what happens when we feed a model data that is already unfair. It’s not just a small glitch, the AI learns these unfair patterns as if they were facts.
+            </p>
+
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="images/informative_images/bias_ai.jpg" alt="Types of AI Bias"
+                    style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            </div>
+
+            <p><strong>Here are some common biases:</strong></p>
+
+            <ul style="margin-bottom: 24px; line-height: 1.6;">
+                <li><strong>Representation Bias:</strong> When datasets lack diversity, certain groups become "invisible". This is why generic prompts often default to Western or majority viewpoints.</li>
+                <li><strong>Historical Bias:</strong> AI mirrors past societal inequalities. If historical data shows a gender gap in leadership, the AI will likely replicate that exclusion today.</li>
+                <li><strong>Stereotypical Bias:</strong> The model reinforces harmful associations. For example, assuming a doctor is a man or that "low-caste" backgrounds are linked to manual labor.</li>
+                <li><strong>Feedback Loops:</strong> When biased AI outputs are used as data for future models, they create a cycle that continuously reinforces the same unfair patterns over time.</li>
+                <li><strong>Explainability & Automation Bias:</strong> AI is often a "black box". Humans tend to trust its suggestions blindly because they appear objective, even when they lack clear reasoning or proof.</li>
+            </ul>
+        
         </section>
-
-
 
         <div class="divider"></div>
 
@@ -202,31 +221,6 @@
 
             <div id="image-fixed-example-container" class="fixed-example">
             </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <!-- UNDERSTANDING BIASES -->
-        <section id="understanding-biases">
-            <h2>Understanding Biases</h2>
-            <p><strong>So, what are we seeing here?</strong><br>
-                AI bias refers to the occurrence of biased results due to human prejudices that skew the original training data or the algorithm itself. AI bias is what happens when we feed a model data that is already unfair. It’s not just a small glitch, the AI learns these unfair patterns as if they were facts.
-            </p>
-
-            <div style="text-align: center; margin: 30px 0;">
-                <img src="images/informative_images/bias_ai.jpg" alt="Types of AI Bias"
-                    style="max-width: 100%; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            </div>
-
-            <p><strong>Here are some common biases:</strong></p>
-
-            <ul style="margin-bottom: 24px; line-height: 1.6;">
-                <li><strong>Representation Bias:</strong> When datasets lack diversity, certain groups become "invisible". This is why generic prompts often default to Western or majority viewpoints.</li>
-                <li><strong>Historical Bias:</strong> AI mirrors past societal inequalities. If historical data shows a gender gap in leadership, the AI will likely replicate that exclusion today.</li>
-                <li><strong>Stereotypical Bias:</strong> The model reinforces harmful associations. For example, assuming a doctor is a man or that "low-caste" backgrounds are linked to manual labor.</li>
-                <li><strong>Feedback Loops:</strong> When biased AI outputs are used as data for future models, they create a cycle that continuously reinforces the same unfair patterns over time.</li>
-                <li><strong>Explainability & Automation Bias:</strong> AI is often a "black box". Humans tend to trust its suggestions blindly because they appear objective, even when they lack clear reasoning or proof.</li>
-            </ul>
         </section>
 
         <div class="divider"></div>
