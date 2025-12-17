@@ -676,26 +676,11 @@ footer p {
         /* Relative text size */
         padding: 0.5vh 2vw;
         /* Relative padding */
-        white-space: nowrap;
-        border: none;
-        flex-shrink: 0;
     }
 
-    /* Switch moves under if needed */
-    .theme-switch-wrapper {
-        position: relative;
-        transform: scale(0.65);
-        margin-top: 1vh;
-        /* Move under if wrapped */
-        margin-left: 2vw;
-        /* Space if inline */
-        right: auto;
-        top: auto;
-        flex-shrink: 0;
-        transform-origin: center;
-        /* Center scaling */
-    }
 }
+
+/* End of mobile media query */
 
 /* LOADING STATE */
 .loading {
@@ -705,7 +690,7 @@ footer p {
 
 /* --- NEW INTERACTIVE ELEMENTS CSS --- */
 
-/* THEME SWITCH SLIDER */
+/* THEME SWITCH SLIDER - DEFAULT (DESKTOP) */
 .theme-switch-wrapper {
     position: absolute;
     top: 50%;
@@ -793,4 +778,54 @@ input:checked+.slider .feather-sun {
 /* Optional: Add hover effect */
 .slider.round:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+   MOBILE OVERRIDES - MOVED TO END FOR PRECEDENCE 
+   This ensures these styles win over the default desktop styles above.
+*/
+@media (max-width: 768px) {
+
+    /* Switch moves under if needed, with relative sizing */
+    .theme-switch-wrapper {
+        position: relative;
+        transform: none;
+        /* Remove scale, use partial sizing instead */
+        margin-top: 1vh;
+        margin-left: 2vw;
+        right: auto;
+        top: auto;
+        flex-shrink: 0;
+    }
+
+    /* Override fixed pixels with relative units */
+    .theme-switch {
+        width: 12vw;
+        /* Approx 60px on small screens */
+        height: 6.8vw;
+        /* Approx 34px */
+    }
+
+    .slider {
+        padding: 0 1vw;
+    }
+
+    .slider:before {
+        height: 4.4vw;
+        /* Approx 22px */
+        width: 4.4vw;
+        left: 0.8vw;
+        bottom: 0.8vw;
+    }
+
+    /* Adjust toggle position for relative units */
+    input:checked+.slider:before {
+        transform: translateX(5.2vw);
+        /* Move relatively */
+    }
+
+    .slider svg {
+        width: 3.2vw;
+        height: 3.2vw;
+    }
 }
