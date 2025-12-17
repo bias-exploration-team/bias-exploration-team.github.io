@@ -692,10 +692,8 @@ footer p {
 
 /* THEME SWITCH SLIDER - DEFAULT (DESKTOP) */
 .theme-switch-wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
+    margin-left: auto;
+    /* Push to right in flex container */
     display: flex;
     align-items: center;
     z-index: 1000;
@@ -787,14 +785,12 @@ input:checked+.slider .feather-sun {
 @media (max-width: 768px) {
 
     /* Switch moves under if needed, with relative sizing */
+    /* Switch becomes just another flex item */
     .theme-switch-wrapper {
-        position: relative;
-        transform: none;
-        /* Remove scale, use partial sizing instead */
+        margin: 0;
+        /* Reset desktop margin-left: auto */
         margin-top: 1vh;
-        margin-left: 2vw;
-        right: auto;
-        top: auto;
+        /* Space if wrapped */
         flex-shrink: 0;
     }
 
