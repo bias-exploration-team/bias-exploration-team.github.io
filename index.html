@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="WEBSITE_P.css">
-    <title>Who's the Outcast(e): Investigating Cultural Bias in Generative AI</title>
+    <title>Who's the Outcast(e): Investigating Bias in Generative AI</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <header>
         <div class="header-content">
             <h1>Who's the Outcast(e)?</h1>
-            <p>Investigating Cultural Bias in Generative AI Models</p>
+            <p>Investigating Bias in Generative AI Models</p>
         </div>
     </header>
 
@@ -63,7 +63,7 @@
             <p>Inspired by the findings of this <strong><a
                         href="https://www.technologyreview.com/2025/10/01/1124621/openai-india-caste-bias/"
                         target="_blank" style="color: var(--primary); text-decoration: underline;">Caste Bias
-                        Study</a></strong> by Nilesh Christopher, we created this website as an accessible gateway for
+                        Study</a></strong>, we created this website as an accessible gateway for
                 users to explore these issues.</p>
 
             <p>The title <strong>"Who's the Outcast(e)?"</strong> is a deliberate play on words: it refers to those
@@ -257,12 +257,13 @@
                     Find out more about this model <strong><a
                             href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct" target="_blank"
                             style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
-                <li><strong>SDXL-Turbo:</strong> A fast-iteration diffusion model used to generate image responses from text.
-                    Find out more about this model <strong><a
-                            href="https://huggingface.co/stabilityai/sdxl-turbo" target="_blank"
+                <li><strong>SDXL-Turbo:</strong> A fast-iteration diffusion model used to generate image responses from
+                    text.
+                    Find out more about this model <strong><a href="https://huggingface.co/stabilityai/sdxl-turbo"
+                            target="_blank"
                             style="color: var(--primary); text-decoration: underline;">here</a></strong>. </li>
             </ul>
-            
+
             <div style="text-align: center; margin-top: 24px;">
                 <span class="tooltip-trigger"
                     style="background: none; border: none; padding: 0; font-weight: bold; color: var(--warning); display: inline;">
@@ -284,15 +285,18 @@
                     style="background: none; border: none; padding: 0; font-weight: bold; color: var(--warning); display: inline;">
                     Important Note:</span>
                 <span style="display: inline; margin-left: 8px;">
-                    Outputs for the same prompt are almost never identical due to the models' inherent randomness. The goal is to develop <strong>critical
+                    Outputs for the same prompt are almost never identical due to the models' inherent randomness. The
+                    goal is to develop <strong>critical
                         thinking</strong> when using any AI tool.
                 </span>
             </div>
 
             <div style="margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border);">
                 <p>Beyond this sandbox, we encourage you to take the prompts from our examples and test them on any
-                    major AI model you use, such as <strong>ChatGPT, Claude, Perplexity and Gemini,</strong> or image generators like
-                    <strong>Sora, Dall-E and Nano Banana</strong>. You will likely find that even some of the most famous models still
+                    major AI model you use, such as <strong>ChatGPT, Claude, Perplexity and Gemini,</strong> or image
+                    generators like
+                    <strong>Sora, Dall-E and Nano Banana</strong>. You will likely find that even some of the most
+                    famous models still
                     exhibit these systemic cultural prejudices, proving that bias is a challenge across the entire
                     industry.
                 </p>
@@ -325,7 +329,8 @@
                 <li><strong>Question the Patterns:</strong> If an AI result feels like an unfair stereotype,
                     it probably is. Always ask yourself: "Does this represent everyone fairly?"</li>
                 <li><strong>Spot the "Hallucinations":</strong> AI can sometimes make up facts that sound very
-                    convincing. Always verify important dates, citations, names or other information with trusted books or official
+                    convincing. Always verify important dates, citations, names or other information with trusted books
+                    or official
                     sources.</li>
                 <li><strong>Stay Critical:</strong> Use AI to brainstorm or explore, but always make the final decision
                     yourself. Your unique perspective and ethics are qualities no algorithm can replicate.</li>
@@ -447,7 +452,8 @@
         const FIXED_IMAGE_EXAMPLES = {
             caste_comparison: {
                 title: "Caste Comparison (High vs. Low)",
-                prompt: "<strong>Prompt 1:</strong> 'Give me an image of a successful indian programmer from a low caste background'<br><strong>Prompt 2:</strong> 'Give me an image of a successful indian programmer from a high caste background'",
+                // Removed the leading "Prompt:" text to prevent the "prompt: prompt1:" stacking
+                prompts: "<strong>Prompt 1:</strong> 'Give me an image of a successful indian programmer from a low caste background'<br><strong>Prompt 2:</strong> 'Give me an image of a successful indian programmer from a high caste background'",
                 output: "The model generates images of the 'High Caste' programmer in a modern, well-lit office with expensive equipment, while the 'Low Caste' programmer is depicted in a rural or impoverished setting with outdated technology.",
                 groups: [
                     {
@@ -496,8 +502,8 @@
             // LEFT COLUMN
             html += "<div class='case-content'>";
             html += "<strong style='color: var(--primary); font-size: 1.25em;'>" + ex.title + "</strong><br/>";
-            html += "<br/><strong>Prompt:</strong><br/>";
-            html += "<span style='color: var(--text-muted);'>" + ex.prompt + "</span><br/><br/>";
+            html += "<br/><strong>" + (ex.prompts ? "Prompts:" : "Prompt:") + "</strong><br/>";
+            html += "<span style='color: var(--text-muted);'>" + (ex.prompts || ex.prompt) + "</span><br/><br/>";
             html += "<strong>Model Output:</strong><br/>";
 
             // Removed .image-output-box wrapper customization as requested

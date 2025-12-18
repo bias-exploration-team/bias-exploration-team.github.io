@@ -131,8 +131,14 @@ header p {
 section {
     margin: 32px auto;
     padding: 24px 0;
-    text-align: left;
+    text-align: justify;
     max-width: 900px;
+}
+
+section h1,
+section h2,
+section h3 {
+    text-align: left;
 }
 
 section p,
